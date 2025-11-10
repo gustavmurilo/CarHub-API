@@ -563,7 +563,7 @@ class CustomManutencaoPDF(FPDF):
         total_fmt = f"R$ {total_val:,.2f}".replace(',', 'X').replace('.', ',').replace('X', '.')
         self.cell(w_total, self.line_h, total_fmt, border=1, align='R', ln=1)
 
-    # Override para evitar NoneType no método interno de escape do FPDF
+    # Override para evitar NoneType no metodo interno de escape do FPDF
     def _escape(self, s):
         if s is None:
             return ''
@@ -1044,7 +1044,7 @@ class CustomClientesComprasPDF(FPDF):
 
                 self.ln(5)
 
-    # Override para evitar NoneType no método interno de escape do FPDF
+    # Override para evitar NoneType no metodo interno de escape do FPDF
     def _escape(self, s):
         if s is None:
             return ''
@@ -1214,7 +1214,7 @@ def criar_pdf_moto():
         motos_com_versao.append(tuple(moto_lista))
 
     pdf = CustomMotosPDF()
-    pdf.create_moto_cards(motos_com_versao)  # Usa o método create_moto_cards com os dados ajustados
+    pdf.create_moto_cards(motos_com_versao)  # Usa o metodo create_moto_cards com os dados ajustados
     pdf_path = "relatorio_motos.pdf"
     pdf.output(pdf_path)
     return send_file(
@@ -1286,7 +1286,7 @@ def criar_pdf_usuarios():
     cursor.close()
 
     pdf = CustomUsuarioPDF()
-    pdf.create_usuario_cards(usuarios)  # Usa o método create_usuario_cards já implementado
+    pdf.create_usuario_cards(usuarios)  # Usa o metodo create_usuario_cards já implementado
     pdf_path = "relatorio_usuarios.pdf"
     pdf.output(pdf_path)
     return send_file(

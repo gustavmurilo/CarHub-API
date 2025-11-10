@@ -138,7 +138,7 @@ def get_movimentacoes_por_tipo(tipo):
     if user_type != 1:  # Apenas administrador tipo 1
         return jsonify({'error': 'Acesso restrito a administradores'}), 403
 
-    # Converter string tipo para o valor numérico
+    # Converter string tipo para o valor numerico
     tipo_valor = 1 if tipo.lower() == 'receita' else 2
 
     try:
