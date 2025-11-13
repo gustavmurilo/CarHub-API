@@ -79,7 +79,7 @@ def enviar_email_cancelamento(email_destinatario, tipo_veiculo, dados_veiculo):
 
     def task_envio():
         try:
-            remetente = 'netcars.contato@gmail.com'
+            remetente = 'carhub.contato@gmail.com'
             senha = senha_app_email
             servidor_smtp = 'smtp.gmail.com'
             porta_smtp = 465
@@ -90,7 +90,7 @@ def enviar_email_cancelamento(email_destinatario, tipo_veiculo, dados_veiculo):
 
             endereco_concessionaria = "Av. Exemplo, 1234 - Centro, Cidade Fictícia"
 
-            assunto = "NetCars - Cancelamento de Reserva"
+            assunto = "Carhub - Cancelamento de Reserva"
 
             # Renderiza o corpo do e-mail utilizando um template específico
             with app_context.app_context():

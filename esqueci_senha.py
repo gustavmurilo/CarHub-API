@@ -31,11 +31,11 @@ def enviar_email_recuperar_senha(email_destinatario, codigo):
     app_context = current_app._get_current_object()
 
     def task_envio():
-        remetente = 'netcars.contato@gmail.com'
+        remetente = 'carhub.contato@gmail.com'
         senha = senha_app_email
         servidor_smtp = 'smtp.gmail.com'
         porta_smtp = 465  # Conexão SSL direta
-        assunto = 'NetCars - Código de Verificação'
+        assunto = 'Carhub - Código de Verificação'
 
         # Renderiza o template com as variáveis desejadas dentro do contexto da aplicação
         with app_context.app_context():
@@ -186,11 +186,11 @@ def enviar_email_verificacao(email_destinatario, codigo):
     app_context = current_app._get_current_object()
 
     def task_envio():
-        remetente = 'netcars.contato@gmail.com'
+        remetente = 'carhub.contato@gmail.com'
         senha = senha_app_email
         servidor_smtp = 'smtp.gmail.com'
         porta_smtp = 465  # Conexão SSL direta
-        assunto = 'NetCars - Verificação de Email'
+        assunto = 'Carhub - Verificação de Email'
 
         # Renderiza o template com as variáveis desejadas dentro do contexto da aplicação
         with app_context.app_context():

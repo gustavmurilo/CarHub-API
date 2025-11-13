@@ -86,7 +86,7 @@ def Buscar_Usuario_Devedor():
 
                 enviar_email_qrcode(
                     to=email,
-                    subject="Lembrete de pagamento - NetCars",
+                    subject="Lembrete de pagamento - Carhub",
                     template="email_lembrete.html",
                     context=context
                 )
@@ -175,7 +175,7 @@ def gerar_pix_funcao(nome: str, valor, chave_pix: str, cidade: str):
 
 
 def enviar_email_qrcode(to: str, subject: str, template: str, context: dict):
-    remetente = 'netcars.contato@gmail.com'
+    remetente = 'carhub.contato@gmail.com'
     senha = senha_app_email
     servidor_smtp = 'smtp.gmail.com'
     porta_smtp = 465
@@ -298,7 +298,7 @@ def gerar_pix():
             'ano': datetime.now().year
         }
 
-        enviar_email_qrcode(email, "NetCars - Confirmação de Pagamento",'email_pix.html',context )
+        enviar_email_qrcode(email, "Carhub - Confirmação de Pagamento",'email_pix.html',context )
 
         caminho = os.path.join(os.getcwd(), "upload", "qrcodes", nome_arquivo)
         return send_file(caminho, mimetype='image/png', as_attachment=True, download_name=nome_arquivo)
